@@ -12,5 +12,5 @@ class Inventory(models.Model):
     instructution = models.CharField(max_length=30)
     requisitioner = models.ForeignKey(Employee, on_delete=models.CASCADE)
     created= models.DateTimeField(default=datetime.datetime.now())
-    message=''
+
     

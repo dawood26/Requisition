@@ -9,11 +9,9 @@ class Vendor(models.Model):
     vn_created= models.DateTimeField(default=datetime.datetime.now())
     
     def __str__(self):
+
         return self.vn_name
-    
-    
-    
-    
+
 class Product(models.Model):
     p_name = models.CharField(max_length=30)
     p_vendor = models.ForeignKey(Vendor, on_delete=models.CASCADE)
